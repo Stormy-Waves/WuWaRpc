@@ -11,16 +11,15 @@ namespace StarRailDiscordRpc;
 
 internal static class Program
 {
-    private const string AppId_Zh = "1100788944901247026";
-    private const string AppId_En = "1100789242029948999";
+    private const string AppId_En = "1243140591064453202";
 
     [STAThread]
     static void Main()
     {
-        using var self = new Mutex(true, "StarRail DiscordRPC", out var allow);
+        using var self = new Mutex(true, "WuWa DiscordRPC", out var allow);
         if (!allow)
         {
-            MessageBox.Show("StarRail DiscordRPC is already running.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            MessageBox.Show("WuWa DiscordRPC is already running.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             Environment.Exit(-1);
         }
 
@@ -33,9 +32,7 @@ internal static class Program
 
         Task.Run(async () =>
         {
-            using var clientZh = new DiscordRpcClient(AppId_Zh);
             using var clientEn = new DiscordRpcClient(AppId_En);
-            clientZh.Initialize();
             clientEn.Initialize();
 
             var playing = false;
@@ -45,15 +42,8 @@ internal static class Program
                 await Task.Delay(1000);
 
                 Debug.Print($"InLoop");
-
-                var miHoyo = true;
-                var handle = FindWindow("UnityWndClass", "崩坏：星穹铁道");
-                if (handle == IntPtr.Zero)
-                {
-                    // hoyoverse
-                    miHoyo = false;
-                    handle = FindWindow("UnityWndClass", "Honkai: Star Rail");
-                }
+                
+                var handle = FindWindow("UnityWndClass", "Wuthering Waves");
 
                 if (handle == IntPtr.Zero)
                 {
@@ -62,10 +52,6 @@ internal static class Program
                     if (clientEn.CurrentPresence != null)
                     {
                         clientEn.ClearPresence();
-                    }
-                    if (clientZh.CurrentPresence != null)
-                    {
-                        clientZh.ClearPresence();
                     }
                     continue;
                 }
@@ -76,31 +62,15 @@ internal static class Program
 
                     Debug.Print($"Check process with {handle} | {process.ProcessName}");
 
-                    if (miHoyo)
+                    if (!playing)
                     {
-                        if (!playing)
-                        {
-                            playing = true;
-                            clientZh.UpdateRpc("logo", "崩坏：星穹铁道");
-                            Debug.Print($"Set RichPresence to {process.ProcessName}");
-                        }
-                        else
-                        {
-                            Debug.Print($"Keep RichPresence to {process.ProcessName}");
-                        }
+                        playing = true;
+                        clientEn.UpdateRpc("logo", "Wuthering Waves");
+                        Debug.Print($"Set RichPresence to  {process.ProcessName}");
                     }
                     else
                     {
-                        if (!playing)
-                        {
-                            playing = true;
-                            clientEn.UpdateRpc("logo", "Honkai: Star Rail");
-                            Debug.Print($"Set RichPresence to  {process.ProcessName}");
-                        }
-                        else
-                        {
-                            Debug.Print($"Keep RichPresence to {process.ProcessName}");
-                        }
+                        Debug.Print($"Keep RichPresence to {process.ProcessName}");
                     }
                 }
                 catch (Exception e)
@@ -109,10 +79,6 @@ internal static class Program
                     if (clientEn.CurrentPresence != null)
                     {
                         clientEn.ClearPresence();
-                    }
-                    if (clientZh.CurrentPresence != null)
-                    {
-                        clientZh.ClearPresence();
                     }
                     Debug.Print($"{e.Message}{Environment.NewLine}{e.StackTrace}");
                 }
@@ -135,7 +101,7 @@ internal static class Program
         {
             BalloonTipIcon = ToolTipIcon.Info,
             ContextMenu = notifyMenu,
-            Text = "StarRail DiscordRPC",
+            Text = "WuWa DiscordRPC",
             Icon = Properties.Resources.tray,
             Visible = true,
         };
