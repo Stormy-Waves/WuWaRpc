@@ -7,16 +7,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="130ee3f7-debb-4142-bab5-ec2f508ef967" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.StarRailRpc/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.WuWaRpc/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.WuWaRpc/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.WuWaRpc/.idea/indexLayout.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.WuWaRpc/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/StarRailRpc.sln" beforeDir="false" afterPath="$PROJECT_DIR$/WuWaRpc.sln" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/StarRailRpc.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/src/WuWaRpc.csproj" afterDir="false" />
-    </list>
+    <list default="true" id="130ee3f7-debb-4142-bab5-ec2f508ef967" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -37,6 +28,7 @@
     &quot;accountId&quot;: &quot;6adbe324-c5df-4b5a-9478-00088dfefdce&quot;
   }
 }</component>
+  <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 8
 }</component>
@@ -100,16 +92,28 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1716458445174</updated>
-      <workItem from="1716458445539" duration="712000" />
+      <workItem from="1716458445539" duration="792000" />
     </task>
+    <task id="LOCAL-00001" summary="Renamed and removed hoyo stuff, class name missing">
+      <option name="closed" value="true" />
+      <created>1716459216214</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1716459216214</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="UnityCheckinConfiguration" checkUnsavedScenes="true" />
   <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+    <MESSAGE value="Renamed and removed hoyo stuff, class name missing" />
+    <option name="LAST_COMMIT_MESSAGE" value="Renamed and removed hoyo stuff, class name missing" />
   </component>
 </project>

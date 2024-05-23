@@ -7,7 +7,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace StarRailDiscordRpc;
+namespace WuWaDiscordRpc;
 
 internal static class Program
 {
@@ -43,7 +43,7 @@ internal static class Program
 
                 Debug.Print($"InLoop");
                 
-                var handle = FindWindow("UnityWndClass", "Wuthering Waves");
+                var handle = FindWindow("UnrealWindow", "Wuthering Waves ");
 
                 if (handle == IntPtr.Zero)
                 {

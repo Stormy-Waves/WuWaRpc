@@ -6,8 +6,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{DC96D5D9-7142-41A0-8AD7-105307CA62DB}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>StarRailDiscordRpc</RootNamespace>
-    <AssemblyName>StarRailDiscordRpc</AssemblyName>
+    <RootNamespace>WuWaDiscordRpc</RootNamespace>
+    <AssemblyName>WuWaDiscordRpc</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -53,7 +53,7 @@
     <ApplicationIcon>Resources\icon.ico</ApplicationIcon>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>StarRailDiscordRpc.Program</StartupObject>
+    <StartupObject>WuWaDiscordRpc.Program</StartupObject>
   </PropertyGroup>
   <PropertyGroup>
     <TargetZone>LocalIntranet</TargetZone>

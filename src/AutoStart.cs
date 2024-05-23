@@ -2,7 +2,7 @@
 using System;
 using System.Reflection;
 
-namespace StarRailDiscordRpc;
+namespace WuWaDiscordRpc;
 
 internal static class AutoStart
 {
@@ -20,7 +20,7 @@ internal static class AutoStart
                 return;
             }
 
-            baseKey.SetValue("StarRail-DiscordRpc", Assembly.GetEntryAssembly().Location);
+            baseKey.SetValue("WuWa-DiscordRpc", Assembly.GetEntryAssembly().Location);
             Console.WriteLine("AutoStartup has been set.");
         }
         catch (Exception e)
@@ -43,7 +43,7 @@ internal static class AutoStart
                 return;
             }
 
-            baseKey.DeleteValue("StarRail-DiscordRpc", false);
+            baseKey.DeleteValue("WuWa-DiscordRpc", false);
             Console.WriteLine("AutoStartup has been deleted.");
         }
         catch (Exception e)
@@ -66,7 +66,7 @@ internal static class AutoStart
                 return false;
             }
 
-            var ace = baseKey.GetValue("StarRail-DiscordRpc");
+            var ace = baseKey.GetValue("WuWa-DiscordRpc");
             var exe = Assembly.GetEntryAssembly().Location;
             return exe.Equals(ace);
         }

@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace StarRailDiscordRpc.Properties {
+namespace WuWaDiscordRpc.Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
