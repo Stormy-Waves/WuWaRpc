@@ -6,6 +6,7 @@ using System.Runtime.InteropServices;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Button = DiscordRPC.Button;
 
 namespace WuWaDiscordRpc;
 
@@ -42,10 +43,10 @@ internal static class Program
                 await Task.Delay(1000);
 
                 Debug.Print($"InLoop");
-                
-                var handle = FindWindow("UnrealWindow", "Wuthering Waves ");
 
-                if (handle == IntPtr.Zero)
+                Process[] processes = Process.GetProcessesByName("Wuthering Waves");
+                
+                if (processes.Length == 0)
                 {
                     Debug.Print($"Not found game process.");
                     playing = false;
@@ -58,9 +59,9 @@ internal static class Program
 
                 try
                 {
-                    var process = Process.GetProcesses().First(x => x.MainWindowHandle == handle);
+                    var process = processes[0];
 
-                    Debug.Print($"Check process with {handle} | {process.ProcessName}");
+                    Debug.Print($"Check process with {process.ProcessName}");
 
                     if (!playing)
                     {
@@ -137,6 +138,21 @@ internal static class Program
             {
                 LargeImageKey = key,
                 LargeImageText = text,
+                SmallImageText = "Stormy Waves",
+                SmallImageKey = "sw",
+            },
+            Buttons = new Button[]
+            {
+                new Button
+                {
+                    Label = "Download Game",
+                    Url = "https://wutheringwaves.kurogames.com/"
+                },
+                new Button
+                {
+                    Label = "Download RPC",
+                    Url = "https://github.com/Stormy-Waves/WuWaRpc/releases/latest"
+                }
             },
             Timestamps = Timestamps.Now,
         });
