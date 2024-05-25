@@ -14,4 +14,4 @@ Enables Discord [Rich Presence](https://discord.com/rich-presence) For Wuthering
   
   
 ### Preview
-![Preview.](https://img.kxnrl.com/ugc/482C57A34141676F5AB4161ECF262FFC9817A234!source)
+![Preview.](./assets/showcase.png)
