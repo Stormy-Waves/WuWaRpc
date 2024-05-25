@@ -1,0 +1,13 @@
+{
+  "template": "${{CHANGELOG}}",
+  "categories": [
+    {
+      "title": "🚀 New Features",
+      "labels": ["enhancement"]
+    },
+    {
+      "title": "🐛 Bug Fixes",
+      "labels": ["bug"]
+    }
+  ]
+}
